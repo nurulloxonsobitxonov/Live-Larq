@@ -1,0 +1,111 @@
+#app {
+  height: 100%
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  /* width: fit-content; */
+}
+
+@media (max-width:768px) {
+
+  html,
+  body {
+    position: relative;
+    height: 100%;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+    height: fit-content;
+    line-height: inherit;
+    scroll-margin: none;
+  }
+}
+
+
+.maincha {
+  width: 100%;
+  height: 450px;
+  background-image: url("../images/tech_blue.jpg");
+
+}
+
+.qwerty {
+  background-image: url("../images/season.jpg");
+  height: 1100px;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.swiper {
+  width: 400px;
+  height: 100%;
+  transform: translateY(80px);
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+@media (max-width:768px) {
+  .swiper-slide {
+    font-size: 10px;
+  }
+}
+
+
+.swiper-slide {
+  text-align: center;
+  color: red;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}

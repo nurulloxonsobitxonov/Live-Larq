@@ -1,38 +1,238 @@
-.App {
-  text-align: center;
+.main {
+  background-image: url("./images/main_img.jpg");
+  background-size: cover;
+  width: 1685px;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav {
+  position: fixed;
+  top: 0;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+
+
+.m_m {
+  background-image: url("../src/images/main_img.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 413px;
+  background-repeat: no-repeat;
+  height: 620px;
+  /* transform: translateY(-20px); */
+
+}
+
+.m_nav {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+}
+
+
+
+@media (max-width:768px) {
+  .cloud1 {
+    width: 200px;
+    height: 100px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+.cloud1 {
+  animation: animation infinite 10s;
+
+}
+
+.media_cloud1 {
+  animation: cloud1 infinite 4s;
+}
+
+.media_cloud2 {
+  animation: cloud2 infinite 4s;
+}
+
+.media_cloud3 {
+  animation: cloud3 infinite 4s;
+}
+
+@keyframes cloud1 {
+  0% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-140px);
+  }
+
+}
+
+@keyframes cloud2 {
+  0% {
+    transform: translateX(60px);
+  }
+
+  100% {
+    transform: translateX(-60px);
+  }
+
+}
+
+@keyframes cloud3 {
+  0% {
+    transform: translateX(80px);
+  }
+
+  100% {
+    transform: translateX(-80px);
+  }
+
+}
+
+
+.cloud2 {
+  animation: animation2 infinite 10s;
+}
+
+.cloud3 {
+  animation: animation3 infinite 10s;
+}
+
+
+
+@keyframes animation {
+  0% {
+    transform: translateX(100px);
+  }
+
+  100% {
+    transform: translateX(-100px);
+  }
+
+}
+
+@keyframes animation2 {
+  0% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(-200px);
+  }
+
+}
+
+@keyframes animation3 {
+  0% {
+    transform: translateX(250px);
+  }
+
+  100% {
+    transform: translateX(-250px);
+  }
+
+}
+
+
+/* The element to apply the animation to */
+.div {
+  width: 700px;
+  height: 800px;
+  /* background: #ECECEE; */
+  background: linear-gradient(45deg, #C2C2C4, #ECECEE);
+  position: absolute;
+  left: 800px;
+}
+
+.switch {
+  position: relative;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+.switch input {
+  appearance: none;
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  background: #1e1e1e;
+  outline: none;
+}
+
+.switch input::before,
+.switch input::after {
+  z-index: 2;
+  position: absolute;
+  top: 56%;
+  transform: translateY(-50%);
+  font-weight: bolder;
+}
+
+.switch input::before {
+  content: "ON";
+  left: 20px;
+}
+
+.switch input::after {
+  content: "OFF";
+  right: 20px;
+}
+
+.switch input:checked {
+  background: #ff9800;
+}
+
+.switch label {
+  z-index: 1;
+  position: absolute;
+  top: 5px;
+  bottom: 4px;
+  border-radius: 20px;
+}
+
+.switch input {
+  transition: 0.25s;
+}
+
+.switch input:checked::after,
+.switch input:checked::before {
   color: white;
+  transition: color 0.5s;
 }
 
-.App-link {
-  color: #61dafb;
+.switch input:checked+label {
+  left: 10px;
+  right: 100px;
+  background: #1e1e1e;
+  transition: left 0.5s, right 0.4s 0.2s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.switch input:not(:checked) {
+  background: #1e1e1e;
+  transition: background 0.4s;
+}
+
+.switch input:not(:checked)::before {
+  color: white;
+  transition: color 0.5s;
+}
+
+.switch input:not(:checked)::after {
+  color: #1e1e1e;
+  transition: color 0.5s 0.2s;
+}
+
+.switch input:not(:checked)+label {
+  left: 100px;
+  right: 10px;
+  background: #ff9800;
+  transition: left 0.4s 0.2s, right 0.5s, background 0.35s;
 }

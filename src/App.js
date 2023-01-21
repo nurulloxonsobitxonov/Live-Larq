@@ -1,23 +1,37 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/Navbar';
+import Main from './components/Main';
+import Main2 from './components/Main2';
+import Trending from './components/Trending';
+import Bottle from './components/Bottle';
+import Justify from './components/Justify';
+import Smart from './components/Smart';
+import Gif from "./components/Gif"
+import GSAP from './components/GSAP';
+import Basq from './components/Basq';
+import Footer from "./components/Footer"
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext';
+
+
 
 function App() {
+  const { currentUser } = useContext(AuthContext)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Navbar profileName={currentUser?.email} profileImg={currentUser?.photoURL} />
+      <Main />
+      <Main2 />
+      <Trending />
+      <Bottle />
+      <Justify />
+      <Smart />
+      <Gif />
+      <GSAP />
+      <Basq />
+      <Footer />
     </div>
   );
 }
