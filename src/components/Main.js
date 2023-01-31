@@ -52,7 +52,7 @@ function Main() {
 
     const style = {
         main: "main max-lg:hidden",
-        li: "text-[50px] py-[51px]  w-[580px] text-white  translate-y-[50px] font-bold  h-[30px] w-[280px]  flex flex-col translate-x-[85px] translate-y-[20px] ",
+        li: "text-[50px] py-[51px]  w-[570px] text-white  translate-y-[50px] font-bold  h-[30px] w-[280px]  flex flex-col translate-x-[85px] translate-y-[20px] ",
         p: "text-[25px] text-white translate-y-[300px] px-[80px] ",
         li1: "li1 group text-white text-[20px] font-bold w-[240px] h-[50px] bg-[#153A5B] list-none absolute top-[540px] mx-[80px] flex items-center justify-center z-10 hover:bg-white  cursor-pointer group hover:text-[#153A5B] duration-500 ",
         li2: "li2 group-hover:mx-[100px] w-[240px] h-[50px] border-[#153A5B] border-[3px] list-none my-[375px] mx-[90px] z-auto ",
